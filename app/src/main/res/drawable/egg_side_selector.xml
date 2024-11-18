@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <layer-list>
+            <!-- Selected background -->
+            <item>
+                <shape android:shape="oval">
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/barbie_pink" />
+                    <padding
+                        android:left="2dp"
+                        android:top="2dp"
+                        android:right="2dp"
+                        android:bottom="2dp" />
+                </shape>
+            </item>
+            <!-- Egg with letter -->
+            <item>
+                <vector
+                    android:width="24dp"
+                    android:height="32dp"
+                    android:viewportWidth="24"
+                    android:viewportHeight="32">
+                    <path
+                        android:fillColor="@color/barbie_pink"
+                        android:pathData="M12,2c-5.5,0 -10,5.6 -10,18.1c0,5.5 4.5,10 10,10s10,-4.5 10,-10C22,7.6 17.5,2 12,2"/>
+                </vector>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <vector
+            android:width="24dp"
+            android:height="32dp"
+            android:viewportWidth="24"
+            android:viewportHeight="32">
+            <path
+                android:fillColor="@color/barbie_pink_dark"
+                android:pathData="M12,2c-5.5,0 -10,5.6 -10,18.1c0,5.5 4.5,10 10,10s10,-4.5 10,-10C22,7.6 17.5,2 12,2"/>
+        </vector>
+    </item>
+</selector>

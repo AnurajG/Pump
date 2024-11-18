@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/scanning_circle">
+
+    <target
+        android:name="scanning_line"
+        android:animation="@animator/scanning_rotate" />
+
+    <target
+        android:name="circle"
+        android:animation="@animator/pulse_animation" />
+</animated-vector>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Egg shape -->
+    <item>
+        <vector
+            android:width="24dp"
+            android:height="32dp"
+            android:viewportWidth="24"
+            android:viewportHeight="32">
+            <path
+                android:fillColor="@color/fluorescent"
+                android:pathData="M12,2 C5.5,2 1,10 1,19 C1,26.5 5.5,30 12,30 C18.5,30 23,26.5 23,19 C23,10 18.5,2 12,2 Z"/>
+        </vector>
+    </item>
+</layer-list>

@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- First Milk Drop (Upside Down) -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="1"
+        android:pathData="M12,22 C14.5,22 16.5,20 16.5,17.5 C16.5,14 12,10 12,10 C12,10 7.5,14 7.5,17.5 C7.5,20 9.5,22 12,22 Z" />
+
+    <!-- Second Milk Drop (Upside Down, Bottom Aligned) -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="1"
+        android:pathData="M8,22 C10.5,22 12.5,20 12.5,17.5 C12.5,14 8,10 8,10 C8,10 3.5,14 3.5,17.5 C3.5,20 5.5,22 8,22 Z" />
+</vector>

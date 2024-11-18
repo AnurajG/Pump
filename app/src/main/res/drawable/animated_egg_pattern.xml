@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/egg_pattern">
+
+    <target
+        android:name="outer_group"
+        android:animation="@animator/ripple_scale_fade_outer" />
+
+    <target
+        android:name="middle_group"
+        android:animation="@animator/ripple_scale_fade_middle" />
+
+    <target
+        android:name="inner_group"
+        android:animation="@animator/ripple_scale_fade_inner" />
+
+    <target
+        android:name="center_group"
+        android:animation="@animator/ripple_scale_fade_center" />
+</animated-vector>

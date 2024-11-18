@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="360dp"
+    android:viewportWidth="360"
+    android:viewportHeight="360">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#FFF5F8"
+        android:pathData="M0,0h360v360h-360z"/>
+
+    <!-- Outermost egg with group for scaling -->
+    <group
+        android:name="outer_group"
+        android:pivotX="180"
+        android:pivotY="180">
+        <path
+            android:name="outer_egg"
+            android:fillColor="#FFE5EE"
+            android:fillAlpha="0.8"
+            android:pathData="M180,20c-88.4,0 -160,89.6 -160,210c0,88.4 71.6,160 160,160s160,-71.6 160,-160C340,109.6 268.4,20 180,20"/>
+    </group>
+
+    <!-- Middle egg with group -->
+    <group
+        android:name="middle_group"
+        android:pivotX="180"
+        android:pivotY="180">
+        <path
+            android:name="middle_egg"
+            android:fillColor="#FFDBEA"
+            android:fillAlpha="0.8"
+            android:pathData="M180,100c-62,0 -112,67.25 -112,150c0,62 50,112 112,112s112,-50 112,-112C292,167.25 242,100 180,100"/>
+    </group>
+
+    <!-- Inner egg with group -->
+    <group
+        android:name="inner_group"
+        android:pivotX="180"
+        android:pivotY="180">
+        <path
+            android:name="inner_egg"
+            android:fillColor="#FFD1E6"
+            android:fillAlpha="0.8"
+            android:pathData="M180,180c-35,0 -63,37.65 -63,84c0,34.72 28.15,63 63,63s63,-28.28 63,-63C243,217.65 215,180 180,180"/>
+    </group>
+
+    <!-- Center egg with group -->
+    <group
+        android:name="center_group"
+        android:pivotX="180"
+        android:pivotY="264">
+        <path
+            android:name="center_egg"
+            android:fillColor="#FFC7E2"
+            android:fillAlpha="0.8"
+            android:pathData="M180,264m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0"/>
+    </group>
+</vector>

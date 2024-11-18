@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/sessionSaveDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/rounded_dialog_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Previous layout elements remain the same until the Action Buttons section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Session"
+        android:textSize="24sp"
+        android:textColor="@color/barbie_pink_dark"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginBottom="24dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <!-- Session Duration Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Session Duration"
+                android:textSize="14sp"
+                android:textColor="@color/barbie_pink"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/sessionDurationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="20sp"
+                android:textColor="@color/barbie_pink_dark"
+                android:fontFamily="@font/montserrat_medium"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Volume Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/volumeInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Volume (ml)"
+        app:boxStrokeColor="@color/barbie_pink"
+        app:hintTextColor="@color/barbie_pink"
+        app:endIconMode="clear_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginBottom="24dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/volumeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:textColor="@color/barbie_pink_dark"
+            android:fontFamily="@font/montserrat_regular"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Side"
+        android:textSize="14sp"
+        android:textColor="@color/barbie_pink"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/sideSelectorContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <FrameLayout
+            android:id="@+id/leftSideSelector"
+            android:layout_width="96dp"
+            android:layout_height="128dp"
+            android:layout_marginEnd="32dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/egg_side_selector"
+                android:duplicateParentState="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/rightSideSelector"
+            android:layout_width="96dp"
+            android:layout_height="128dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/egg_side_selector"
+                android:duplicateParentState="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Action Buttons - Modified to use icons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancelButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:icon="@drawable/ic_close"
+            app:iconTint="@color/barbie_pink"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_marginEnd="8dp"
+            app:cornerRadius="24dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:icon="@drawable/ic_check"
+            android:textColor="@color/white"
+            app:iconTint="@color/white"
+            android:backgroundTint="@color/barbie_pink"
+            app:cornerRadius="24dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"/>
+    </LinearLayout>
+</LinearLayout>

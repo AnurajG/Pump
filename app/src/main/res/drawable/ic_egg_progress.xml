@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background (optional, for better visibility) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Fill -->
+    <item android:id="@+id/egg_fill"
+        android:drawable="@drawable/ic_egg_fill"
+        android:gravity="bottom"/>
+
+    <!-- Outline -->
+    <item android:id="@+id/egg_outline"
+        android:drawable="@drawable/ic_egg_outline"/>
+</layer-list>
