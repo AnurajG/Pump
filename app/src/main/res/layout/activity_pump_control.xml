@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
-
     <!-- Gradient Background -->
     <ImageView
         android:id="@+id/ripple_egg_image"
@@ -83,8 +82,8 @@
         app:icon="@drawable/ic_switch_on_off"
         app:iconGravity="textStart"
         app:iconPadding="0dp"
-        app:iconTint="@color/barbie_pink"
-        android:backgroundTint="@color/fluorescent"
+        app:iconTint="@color/white"
+        android:backgroundTint="@color/barbie_pink"
         app:cornerRadius="24dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@id/timerContainer"
@@ -106,7 +105,7 @@
             android:id="@+id/timer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10:04"
+            android:text="00:00"
             android:textSize="40sp"
             android:textColor="@color/barbie_pink_dark"
             android:fontFamily="@font/montserrat_regular"
@@ -199,8 +198,8 @@
                 app:icon="@drawable/ic_pause"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp"
-                app:iconTint="@color/barbie_pink"
-                android:backgroundTint="@color/fluorescent"
+                app:iconTint="@color/white"
+                android:backgroundTint="@color/barbie_pink"
                 app:cornerRadius="32dp"/>
 
         </LinearLayout>
@@ -227,8 +226,8 @@
                     android:background="@drawable/mode_selector_background"
                     android:src="@drawable/ic_mode_automatic"
                     android:layout_marginEnd="16dp"
-                    android:backgroundTint="@color/fluorescent"
-                    app:tint="@color/barbie_pink"/>
+                    android:backgroundTint="@color/barbie_pink"
+                    app:tint="@color/white"/>
 
                 <ImageButton
                     android:id="@+id/massageModeButton"
@@ -237,8 +236,8 @@
                     android:background="@drawable/mode_selector_background"
                     android:src="@drawable/ic_mode_massage"
                     android:layout_marginEnd="16dp"
-                    android:backgroundTint="@color/fluorescent"
-                    app:tint="@color/barbie_pink"/>
+                    android:backgroundTint="@color/barbie_pink"
+                    app:tint="@color/white"/>
 
                 <ImageButton
                     android:id="@+id/expressionModeButton"
@@ -247,8 +246,8 @@
                     android:background="@drawable/mode_selector_background"
                     android:src="@drawable/ic_mode_expression"
                     android:layout_marginEnd="16dp"
-                    android:backgroundTint="@color/fluorescent"
-                    app:tint="@color/barbie_pink"/>
+                    android:backgroundTint="@color/barbie_pink"
+                    app:tint="@color/white"/>
 
                 <ImageButton
                     android:id="@+id/simulationModeButton"
@@ -256,8 +255,8 @@
                     android:layout_height="48dp"
                     android:background="@drawable/mode_selector_background"
                     android:src="@drawable/ic_mode_stimulation"
-                    android:backgroundTint="@color/fluorescent"
-                    app:tint="@color/barbie_pink"/>
+                    android:backgroundTint="@color/barbie_pink"
+                    app:tint="@color/white"/>
             </LinearLayout>
 
             <TextView
@@ -284,8 +283,8 @@
                 android:layout_height="48dp"
                 android:background="@drawable/circle_button_bg"
                 android:src="@drawable/ic_minus"
-                android:backgroundTint="@color/fluorescent"
-                app:tint="@color/barbie_pink"/>
+                android:backgroundTint="@color/barbie_pink"
+                app:tint="@color/white"/>
 
             <TextView
                 android:id="@+id/currentLevelText"
@@ -303,8 +302,8 @@
                 android:layout_height="48dp"
                 android:background="@drawable/circle_button_bg"
                 android:src="@drawable/ic_plus"
-                android:backgroundTint="@color/fluorescent"
-                app:tint="@color/barbie_pink"/>
+                android:backgroundTint="@color/barbie_pink"
+                app:tint="@color/white"/>
         </LinearLayout>
 
         <LinearLayout
@@ -332,5 +331,27 @@
                 android:fontFamily="@font/montserrat_medium"/>
         </LinearLayout>
     </LinearLayout>
-
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/deletePumpButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/ic_delete"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@color/barbie_pink"
+        android:backgroundTint="@color/white"
+        app:cornerRadius="24dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <include
+        android:id="@+id/connecting_overlay"
+        layout="@layout/connecting_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -76,8 +76,8 @@ class HomeActivity : AppCompatActivity() {
                     false // Don't select the tab since we're leaving this activity
                 }
                 R.id.navigation_me -> {
-                    // Handle profile navigation
-                    true
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    false // Don't select the tab since we're leaving this activity
                 }
                 else -> false
             }

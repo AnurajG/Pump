@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Focused state -->
+    <item android:color="@color/barbie_pink" android:state_focused="true"/>
+
+    <!-- Error state -->
+    <item android:color="@android:color/holo_red_light" app:state_error="true"/>
+
+    <!-- Disabled state -->
+    <item android:color="#CCCCCC" android:state_enabled="false"/>
+
+    <!-- Hovered state -->
+    <item android:color="@color/barbie_pink" android:state_hovered="true"/>
+
+    <!-- Default state -->
+    <item android:color="#CCCCCC"/>
+</selector>

@@ -13,11 +13,18 @@
         android:padding="24dp">
 
         <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
             android:id="@+id/logoImage"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="24dp"
             android:adjustViewBounds="true"
             android:src="@drawable/eomma_logo_stick" />
 
@@ -27,40 +34,47 @@
             android:layout_marginTop="32dp"
             android:layout_marginBottom="32dp"
             android:fontFamily="@font/montserrat_medium"
-            android:text="Let's create your Eomma account"
+            android:text="Create your Eomma account"
             android:textAlignment="center"
             android:textColor="#2F2F2F"
             android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_country"
             style="@style/CustomTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:hint="Name"
-            app:fontFamily="@font/montserrat_regular">
+            android:hint="Country"
+            app:fontFamily="@font/montserrat_regular"
+            app:endIconMode="dropdown_menu"
+            app:endIconTint="#2F2F2F">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nameInput"
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/spinner_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
+                android:focusable="false"
                 android:fontFamily="@font/montserrat_regular"
-                android:inputType="textPersonName"
+                android:inputType="none"
                 android:paddingHorizontal="0dp"
                 android:paddingVertical="8dp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_email"
             style="@style/CustomTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="Email"
+            app:errorEnabled="true"
             app:fontFamily="@font/montserrat_regular">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailInput"
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -70,17 +84,57 @@
                 android:paddingVertical="8dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Send Code Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_send_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:padding="12dp"
+            android:text="Send Verification Code"
+            android:textAllCaps="false"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:strokeColor="@color/barbie_pink"
+            android:textColor="@color/barbie_pink" />
+
+        <!-- Verification Code Field -->
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_verification_code"
             style="@style/CustomTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:hint="Password"
-            app:fontFamily="@font/montserrat_regular"
-            app:passwordToggleEnabled="true">
+            android:layout_marginBottom="16dp"
+            android:hint="Verification Code"
+            android:visibility="gone"
+            app:errorEnabled="true"
+            app:fontFamily="@font/montserrat_regular">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordInput"
+                android:id="@+id/et_verification_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/montserrat_regular"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingHorizontal="0dp"
+                android:paddingVertical="8dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_password"
+            style="@style/CustomTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Password"
+            app:errorEnabled="true"
+            app:fontFamily="@font/montserrat_regular"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -90,70 +144,58 @@
                 android:paddingVertical="8dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:fontFamily="@font/montserrat_regular"
-            android:text="8+ characters, inc. uppercase, lowercase &amp; number"
-            android:textColor="#757575"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/termsLink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/montserrat_regular"
-            android:text="Eomma Terms of Use and Privacy Policy"
-            android:textColor="#4CAF50"
-            android:textSize="14sp" />
-
-        <CheckBox
-            android:id="@+id/termsCheckbox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/montserrat_regular"
-            android:text="I agree to Eomma Terms of Use and Privacy Policy"
-            android:textSize="14sp" />
-
-        <CheckBox
-            android:id="@+id/newsletterCheckbox"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_confirm_password"
+            style="@style/CustomTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
-            android:fontFamily="@font/montserrat_regular"
-            android:text="Update me about Eomma news"
-            android:textSize="14sp" />
+            android:hint="Confirm Password"
+            app:errorEnabled="true"
+            app:fontFamily="@font/montserrat_regular"
+            app:endIconMode="password_toggle">
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/BarbiePinkButton"
-            android:id="@+id/createAccountButton"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/montserrat_regular"
+                android:inputType="textPassword"
+                android:paddingHorizontal="0dp"
+                android:paddingVertical="8dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="12dp"
+                android:text="Create Account"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/barbie_pink" />
+
+            <ProgressBar
+                android:id="@+id/loading_progress"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:fontFamily="@font/montserrat_medium"
-            android:padding="12dp"
-            android:text="Create account"
-            android:textAllCaps="false" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:fontFamily="@font/montserrat_regular"
-            android:text="Already have an Eomma account?"
-            android:textAlignment="center"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/continueWithoutAccountLink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/montserrat_regular"
-            android:text="Continue without account"
+            android:text="By creating an account, you agree to our Terms of Service and Privacy Policy"
             android:textAlignment="center"
             android:textColor="#757575"
             android:textSize="14sp" />

@@ -137,8 +137,9 @@ class PumpSessionsActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_me -> {
-                    // Handle profile navigation
-                    true
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    finish()
+                    false
                 }
                 else -> false
             }

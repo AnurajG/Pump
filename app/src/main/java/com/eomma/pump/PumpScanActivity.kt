@@ -304,7 +304,7 @@ class FoundDevicesAdapter(
 
         fun bind(device: ScanDeviceBean) {
             currentDevice = device
-            pumpName.text = "Eomma Pump (${device.address})"
+            pumpName.text = "Eomma Pump (${device.id})"
         }
     }
 

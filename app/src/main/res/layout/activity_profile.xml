@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink_bg"
+    android:fitsSystemWindows="true">
+
+    <!-- Top Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your account"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Profile Section -->
+    <LinearLayout
+        android:id="@+id/profileSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="24dp"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/titleText">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/profile_placeholder"
+            android:background="@color/barbie_pink"
+            android:padding="8dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anuraj Gupta"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View profile"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/montserrat_medium"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_right"/>
+    </LinearLayout>
+
+    <!-- Settings Section -->
+    <TextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/profileSection"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/settingsCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toBottomOf="@id/settingsTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Personalization -->
+            <LinearLayout
+                android:id="@+id/myBabyItem"
+                style="@style/SettingsMenuItem">
+                <TextView
+                    android:fontFamily="@font/montserrat_regular"
+                    style="@style/SettingsMenuText"
+                    android:text="My baby"/>
+                <ImageView
+                    style="@style/SettingsMenuArrow"/>
+            </LinearLayout>
+
+            <View style="@style/SettingsDivider"/>
+
+            <!-- Your device -->
+            <LinearLayout
+                android:id="@+id/appSettingsItem"
+                style="@style/SettingsMenuItem">
+                <TextView
+                    style="@style/SettingsMenuText"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Personalization &amp; preferences"/>
+                <ImageView
+                    style="@style/SettingsMenuArrow"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Terms Section -->
+    <TextView
+        android:id="@+id/termsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terms and conditions"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/settingsCard"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/termsCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toBottomOf="@id/termsTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Privacy -->
+            <LinearLayout
+                android:id="@+id/aboutItem"
+                style="@style/SettingsMenuItem">
+                <TextView
+                    style="@style/SettingsMenuText"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Privacy"/>
+                <ImageView
+                    style="@style/SettingsMenuArrow"/>
+            </LinearLayout>
+
+            <View style="@style/SettingsDivider"/>
+
+            <!-- Terms of use -->
+            <LinearLayout
+                android:id="@+id/termsItem"
+                style="@style/SettingsMenuItem">
+                <TextView
+                    style="@style/SettingsMenuText"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Terms of use"/>
+                <ImageView
+                    style="@style/SettingsMenuArrow"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Logout Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logoutButton"
+        style="@style/Widget.EommaPump.Button.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/barbie_pink"
+        app:cornerRadius="8dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_margin="16dp"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/deleteAccountButton"/>
+
+    <!-- Delete Account Button -->
+    <Button
+        android:id="@+id/deleteAccountButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete my account"
+        android:textColor="@color/red"
+        android:fontFamily="@font/montserrat_medium"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="32dp"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        style="?attr/borderlessButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
